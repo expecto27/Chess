@@ -10,16 +10,18 @@ var step = false;
 var pos_code
 var pos_x
 var pos_y
+var count_step
 
 func _ready():
 	centerCell()
 	pos_code = ind_x_y()
 	pos_x = position.x
 	pos_y = position.y
+	count_step = 1
 	
 func _process(delta):
 	if Input.is_action_pressed("click") and onThis():
-		self.position = get_global_mouse_position() - center_position
+		self.position = get_global_mouse_position() - center_position		
 		step = true
 	elif step:
 		centerCell()
@@ -62,11 +64,12 @@ func ind_x_y():
 	return Vector2(x, y)
 
 func valid(new_poss):
-	var rook = (new_poss.x == pos_code.x) or new_poss.y == pos_code.y
-	var bishop = abs(new_poss.x - pos_code.x) == abs(new_poss.y - pos_code.y)
-	if  bishop or rook:
+	var steps = 2 if count_step == 1 else 1
+	print(steps, ' ', count_step)
+	if (pos_code.y - new_poss.y) <= steps and (pos_code.y - new_poss.y) > 0 and pos_code.x == new_poss.x:
 		position.x = cells_x[new_poss.x]
 		position.y = cells_y[new_poss.y]
+		count_step += 1
 	else:
 		position.x = cells_x[pos_code.x]
 		position.y = cells_y[pos_code.y]

@@ -1,16 +1,18 @@
-[gd_scene load_steps=13 format=3 uid="uid://c73f2dpggr2rn"]
+[gd_scene load_steps=15 format=3 uid="uid://bce606lo3ng41"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_b1c0q"]
 [ext_resource type="Texture2D" uid="uid://4c0lpsw2l1o" path="res://assets/pngwing.com-assets/Слой 2.png" id="2_ga2u8"]
-[ext_resource type="PackedScene" uid="uid://c0u365b80pids" path="res://Wbishop.tscn" id="2_p6bog"]
-[ext_resource type="PackedScene" uid="uid://rmqvn04qbukl" path="res://Wking.tscn" id="3_6r3rj"]
+[ext_resource type="PackedScene" path="res://Wbishop.tscn" id="2_p6bog"]
+[ext_resource type="PackedScene" uid="uid://dtmshk4es4qde" path="res://Wp.tscn" id="3_5jwma"]
+[ext_resource type="PackedScene" uid="uid://beocjk6tmmq5r" path="res://Wking.tscn" id="3_6r3rj"]
+[ext_resource type="Script" path="res://Wp.gd" id="4_ctpgk"]
 [ext_resource type="Script" path="res://Wking.gd" id="4_wvk4a"]
-[ext_resource type="PackedScene" uid="uid://cegjfka1ftok8" path="res://Wqueen.tscn" id="5_3a76m"]
-[ext_resource type="PackedScene" uid="uid://ba4hitfrdip83" path="res://Wrook.tscn" id="5_ecbjn"]
+[ext_resource type="PackedScene" path="res://Wqueen.tscn" id="5_3a76m"]
+[ext_resource type="PackedScene" path="res://Wrook.tscn" id="5_ecbjn"]
 [ext_resource type="Script" path="res://Wrook.gd" id="6_8sl2i"]
 [ext_resource type="Script" path="res://Wqueen.gd" id="6_uopjp"]
 [ext_resource type="Script" path="res://Wbishop.gd" id="8_psfng"]
-[ext_resource type="PackedScene" uid="uid://cf0d3stctnpib" path="res://Wknight.tscn" id="9_8ydkq"]
+[ext_resource type="PackedScene" path="res://Wknight.tscn" id="9_8ydkq"]
 [ext_resource type="Script" path="res://Wknight.gd" id="10_blx6l"]
 
 [node name="main" type="Node2D"]
@@ -26,6 +28,11 @@ position = Vector2(286, 279)
 scale = Vector2(1.42966, 1.38958)
 texture = ExtResource("2_ga2u8")
 metadata/_edit_lock_ = true
+
+[node name="Wp1" parent="." instance=ExtResource("3_5jwma")]
+position = Vector2(10, 414)
+scale = Vector2(0.55, 0.55)
+script = ExtResource("4_ctpgk")
 
 [node name="Wrook2" parent="." instance=ExtResource("5_ecbjn")]
 position = Vector2(496, 482)
