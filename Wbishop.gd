@@ -62,7 +62,7 @@ func ind_x_y():
 	return Vector2(x, y)
 
 func valid(new_poss):
-	if new_poss.x == pos_code.x or new_poss.y == pos_code.y:
+	if abs(new_poss.x - pos_code.x) == abs(new_poss.y - pos_code.y):
 		position.x = cells_x[new_poss.x]
 		position.y = cells_y[new_poss.y]
 	else:

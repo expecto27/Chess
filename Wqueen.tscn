@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cegjfka1ftok8"]
+
+[ext_resource type="Texture2D" uid="uid://blwlrfwel8gpi" path="res://assets/120px-Chess_tile_ql.svg.png" id="1_c0mlr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5j5db"]
+size = Vector2(114, 115)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(58, 59)
+scale = Vector2(0.966667, 0.966667)
+texture = ExtResource("1_c0mlr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(58, 58.5)
+shape = SubResource("RectangleShape2D_5j5db")
