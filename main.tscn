@@ -1,194 +1,31 @@
-[gd_scene load_steps=18 format=3 uid="uid://c73f2dpggr2rn"]
+[gd_scene load_steps=7 format=3 uid="uid://c73f2dpggr2rn"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_b1c0q"]
-[ext_resource type="Texture2D" uid="uid://lvb0st2opque" path="res://assets/board.png" id="2_5j2ad"]
-[ext_resource type="Script" path="res://Figure.gd" id="2_i0ebr"]
-[ext_resource type="Texture2D" uid="uid://b1nhasx325p6t" path="res://assets/120px-Chess_tile_kd.svg.png" id="2_ojmr8"]
-[ext_resource type="Texture2D" uid="uid://ds5lbrwctraoq" path="res://assets/120px-Chess_tile_kl.svg.png" id="2_v6g8v"]
-[ext_resource type="Texture2D" uid="uid://b1t3qr4rvmu1k" path="res://assets/Chess_tile_pd.svg.png" id="3_wm28s"]
-[ext_resource type="Texture2D" uid="uid://blwlrfwel8gpi" path="res://assets/120px-Chess_tile_ql.svg.png" id="3_xxoeu"]
-[ext_resource type="Texture2D" uid="uid://descoqqccivjh" path="res://assets/120px-Chess_tile_nd.svg.png" id="4_3o57p"]
-[ext_resource type="Script" path="res://BKing.gd" id="4_4a38i"]
-[ext_resource type="Texture2D" uid="uid://bjkbtpxijibp7" path="res://assets/Chess_tile_pl.svg.png" id="4_xma8r"]
-[ext_resource type="Texture2D" uid="uid://xs75lq43gjpe" path="res://assets/120px-Chess_tile_bd.svg.png" id="5_ibh6q"]
-[ext_resource type="Texture2D" uid="uid://3dxecljvyvki" path="res://assets/120px-Chess_tile_rd.svg.png" id="6_2hro6"]
-[ext_resource type="Script" path="res://BPawn7.gd" id="6_ypdvk"]
-[ext_resource type="Texture2D" uid="uid://dmjvbioake3dv" path="res://assets/120px-Chess_qdt26.svg.png" id="7_dqadw"]
-[ext_resource type="Texture2D" uid="uid://cp8gvabcwi414" path="res://assets/120px-Chess_tile_bl.svg.png" id="10_wdc5q"]
-[ext_resource type="Texture2D" uid="uid://b5m3wqyhyohnw" path="res://assets/Chess_tile_nl.svg.png" id="11_fq7xk"]
-[ext_resource type="Texture2D" uid="uid://bmiiiv5nqcn8s" path="res://assets/120px-Chess_tile_rl-whitebg.svg.png" id="11_qs7wt"]
+[ext_resource type="Texture2D" uid="uid://4c0lpsw2l1o" path="res://assets/pngwing.com-assets/Слой 2.png" id="2_ga2u8"]
+[ext_resource type="PackedScene" uid="uid://rmqvn04qbukl" path="res://Wking.tscn" id="3_6r3rj"]
+[ext_resource type="Script" path="res://Wking.gd" id="4_wvk4a"]
+[ext_resource type="PackedScene" uid="uid://ba4hitfrdip83" path="res://Wrook.tscn" id="5_ecbjn"]
+[ext_resource type="Script" path="res://Wrook.gd" id="6_8sl2i"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_b1c0q")
 
-[node name="Figure" type="Sprite2D" parent="."]
-script = ExtResource("2_i0ebr")
-
-[node name="BKing" type="Sprite2D" parent="Figure"]
-position = Vector2(633, 54)
-scale = Vector2(0.583333, 0.55)
-texture = ExtResource("2_ojmr8")
-script = ExtResource("4_4a38i")
-
-[node name="BPawn7" type="Sprite2D" parent="Figure/BKing"]
-position = Vector2(-541.715, 140)
-scale = Vector2(1.08571, 1.12121)
-texture = ExtResource("3_wm28s")
-script = ExtResource("6_ypdvk")
-
-[node name="BPawn8" type="Sprite2D" parent="Figure/BKing"]
-position = Vector2(-406.286, 140)
-scale = Vector2(1.11429, 1.15151)
-texture = ExtResource("3_wm28s")
-
-[node name="BPawn6" type="Sprite2D" parent="Figure/BKing"]
-position = Vector2(-272.572, 140)
-scale = Vector2(1.11429, 1.12121)
-texture = ExtResource("3_wm28s")
-
-[node name="BPawn4" type="Sprite2D" parent="Figure/BKing"]
-position = Vector2(-136.286, 140.613)
-scale = Vector2(1.12857, 1.14073)
-texture = ExtResource("3_wm28s")
-
-[node name="BKnight" type="Sprite2D" parent="Figure/BKing"]
-position = Vector2(266.572, 0.90909)
-scale = Vector2(0.928573, 0.984848)
-texture = ExtResource("4_3o57p")
-
-[node name="BPawn3" type="Sprite2D" parent="Figure/BKing"]
-position = Vector2(-2.57153, 139.401)
-scale = Vector2(1.04286, 1.0905)
-texture = ExtResource("3_wm28s")
-
-[node name="BPawn5" type="Sprite2D" parent="Figure/BKing"]
-position = Vector2(133.714, 139.865)
-scale = Vector2(1.12857, 1.15377)
-texture = ExtResource("3_wm28s")
-
-[node name="BPawn2" type="Sprite2D" parent="Figure/BKing"]
-position = Vector2(268.286, 140)
-scale = Vector2(1.1, 1.12121)
-texture = ExtResource("3_wm28s")
-
-[node name="BPawn" type="Sprite2D" parent="Figure/BKing"]
-position = Vector2(403.715, 140)
-scale = Vector2(1.1, 1.15152)
-texture = ExtResource("3_wm28s")
-
-[node name="BBishop2" type="Sprite2D" parent="Figure/BKing"]
-position = Vector2(132, 1.81818)
-scale = Vector2(1.05714, 1.03577)
-texture = ExtResource("5_ibh6q")
-
-[node name="BRook2" type="Sprite2D" parent="Figure/BKing"]
-position = Vector2(408.857, 2.72727)
-scale = Vector2(1.07143, 1.13636)
-texture = ExtResource("6_2hro6")
-
-[node name="BRook" type="Sprite2D" parent="Figure/BKing"]
-position = Vector2(-541.274, 1.77686)
-scale = Vector2(1.11928, 1.19459)
-texture = ExtResource("6_2hro6")
-
-[node name="BKnight2" type="Sprite2D" parent="Figure/BKing"]
-position = Vector2(-404.572, 0.909097)
-scale = Vector2(0.885715, 0.924242)
-texture = ExtResource("4_3o57p")
-
-[node name="BBishop" type="Sprite2D" parent="Figure/BKing"]
-position = Vector2(-272.572, 7.62939e-06)
-scale = Vector2(1.05796, 1.09298)
-texture = ExtResource("5_ibh6q")
-
-[node name="BQueen" type="Sprite2D" parent="Figure/BKing"]
-position = Vector2(-135.429, 0.9091)
-scale = Vector2(1.02857, 1.04545)
-texture = ExtResource("7_dqadw")
-
-[node name="WKing" type="Sprite2D" parent="Figure/BKing"]
-position = Vector2(-1.71436, 963.636)
-scale = Vector2(1.02857, 1.01515)
-texture = ExtResource("2_v6g8v")
-
-[node name="WPawn5" type="Sprite2D" parent="Figure/BKing/WKing"]
-position = Vector2(-521.667, -132.537)
-scale = Vector2(0.931938, 0.949506)
-texture = ExtResource("4_xma8r")
-
-[node name="WPawn7" type="Sprite2D" parent="Figure/BKing/WKing"]
-position = Vector2(-395, -132.537)
-scale = Vector2(0.945195, 0.974135)
-texture = ExtResource("4_xma8r")
-
-[node name="WPawn8" type="Sprite2D" parent="Figure/BKing/WKing"]
-position = Vector2(-265, -132.537)
-scale = Vector2(0.958642, 0.999403)
-texture = ExtResource("4_xma8r")
-
-[node name="WPawn6" type="Sprite2D" parent="Figure/BKing/WKing"]
-position = Vector2(-131.667, -130.746)
-scale = Vector2(0.972279, 1.02533)
-texture = ExtResource("4_xma8r")
-
-[node name="WPawn4" type="Sprite2D" parent="Figure/BKing/WKing"]
-position = Vector2(391.142, -132.571)
-scale = Vector2(0.945195, 0.974135)
-texture = ExtResource("4_xma8r")
-
-[node name="WPawn3" type="Sprite2D" parent="Figure/BKing/WKing"]
-position = Vector2(263.146, -131.979)
-scale = Vector2(0.958642, 0.999403)
-texture = ExtResource("4_xma8r")
-
-[node name="WPawn2" type="Sprite2D" parent="Figure/BKing/WKing"]
-position = Vector2(133.33, -131.37)
-scale = Vector2(0.972279, 1.02533)
-texture = ExtResource("4_xma8r")
-
-[node name="WPawn" type="Sprite2D" parent="Figure/BKing/WKing"]
-position = Vector2(1.66687, -130.746)
-scale = Vector2(0.986111, 1.05192)
-texture = ExtResource("4_xma8r")
-
-[node name="WBishop2" type="Sprite2D" parent="Figure/BKing/WKing"]
-position = Vector2(131.924, 4.55343)
-scale = Vector2(1.07905, 1.11814)
-texture = ExtResource("10_wdc5q")
-
-[node name="WRook2" type="Sprite2D" parent="Figure/BKing/WKing"]
-position = Vector2(395, 3.58203)
-scale = Vector2(1, 1.06105)
-texture = ExtResource("11_qs7wt")
-
-[node name="WRook" type="Sprite2D" parent="Figure/BKing/WKing"]
-position = Vector2(-528.334, 1.79114)
-scale = Vector2(1, 1.03007)
-texture = ExtResource("11_qs7wt")
-
-[node name="WKnight2" type="Sprite2D" parent="Figure/BKing/WKing"]
-position = Vector2(261.667, 3.58215)
-scale = Vector2(1, 1.03007)
-texture = ExtResource("11_fq7xk")
-
-[node name="WKnight" type="Sprite2D" parent="Figure/BKing/WKing"]
-position = Vector2(-395, 3.58204)
-scale = Vector2(1, 1.01493)
-texture = ExtResource("11_fq7xk")
-
-[node name="WBishop" type="Sprite2D" parent="Figure/BKing/WKing"]
-position = Vector2(-261.667, 3.58215)
-scale = Vector2(1.1142, 1.09156)
-texture = ExtResource("10_wdc5q")
-
-[node name="WQueen" type="Sprite2D" parent="Figure/BKing/WKing"]
-position = Vector2(-131.667, 1.79089)
-scale = Vector2(1.05556, 1.04478)
-texture = ExtResource("3_xxoeu")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(80, 10)
+scale = Vector2(1.43683, 1.38958)
 
 [node name="Board" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(585, 330)
-scale = Vector2(2.95089, 2.85386)
-texture = ExtResource("2_5j2ad")
-metadata/_edit_lock_ = true
+position = Vector2(286, 279)
+scale = Vector2(1.42966, 1.38958)
+texture = ExtResource("2_ga2u8")
+
+[node name="Wking" parent="." instance=ExtResource("3_6r3rj")]
+position = Vector2(286, 481)
+scale = Vector2(0.55, 0.55)
+script = ExtResource("4_wvk4a")
+
+[node name="Wrook" parent="." instance=ExtResource("5_ecbjn")]
+position = Vector2(10, 483)
+scale = Vector2(0.55, 0.55)
+script = ExtResource("6_8sl2i")
